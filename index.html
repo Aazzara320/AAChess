@@ -317,6 +317,12 @@ fieldset{border:0;margin:0;padding:0;min-width:0;display:flex;flex-direction:col
 .photo.side figcaption{color:var(--mist)}
 .meet .photo img{max-width:520px}
 
+.collage .collage-art{position:relative;padding-right:22%;padding-bottom:26%;max-width:600px}
+.collage .c-main{width:100%;border:var(--border);box-shadow:none}
+.collage .c-inset{position:absolute;right:0;bottom:0;width:50%;border:5px solid var(--white);outline:3px solid var(--navy);box-shadow:12px 12px 0 var(--navy)}
+.collage figcaption{margin-top:6px}
+@media (max-width:640px){.collage .collage-art{padding-right:14%}.collage .c-inset{box-shadow:6px 6px 0 var(--navy);right:8px}}
+
 /* Footer */
 .site-foot{background:var(--navy);border-top:1px solid var(--navy-line);padding-block:clamp(56px,7vw,88px) 40px}
 .foot-big{font-family:var(--f-display);font-stretch:125%;font-weight:900;font-size:clamp(2.2rem,7.5vw,6.4rem);line-height:.95;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:clamp(36px,5vw,56px)}
@@ -493,9 +499,12 @@ fieldset{border:0;margin:0;padding:0;min-width:0;display:flex;flex-direction:col
 </section>
 <section class="band light" aria-labelledby="meet">
   <div class="wrap meet">
-    <figure class="photo">
-      <img src="anthony-tournament.jpg" width="720" height="960" alt="Anthony at a tournament board, chin resting on his hand, thinking through a position during a game against an International Master. A chess clock and scoresheet sit beside the board.">
-      <figcaption>Anthony at a tournament, playing an International Master.</figcaption>
+    <figure class="photo collage">
+      <div class="collage-art">
+        <img class="c-main" src="anthony-tournament.jpg" width="720" height="960" alt="Anthony at a tournament board, chin resting on his hand, thinking through a position during a game against an International Master. A chess clock and scoresheet sit beside the board.">
+        <img class="c-inset" src="anthony-fencing.jpg" width="1400" height="1400" alt="Anthony, on the left, in the middle of a fencing bout in a gym, one leg lifted as he attacks.">
+      </div>
+      <figcaption>Anthony at a tournament against an International Master, and on the fencing strip.</figcaption>
     </figure>
     <div class="meet-copy">
       <span class="eyebrow">Meet your coach</span>
